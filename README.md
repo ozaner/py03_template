@@ -27,11 +27,5 @@ poetry run pytest
 poetry run cargo test
 ```
 
-### Notes
-Running `poetry run cargo test` on windows returns an error `STATUS_DLL_NOT_FOUND` if the `python3x.dll` file is nowhere in the path (where `x` is the python version being used by the project).
-
-`pyenv-win` seems to include shims for the `python3x` file but not the `python3x.dll` file. As a result, `cargo test` can't run.
-
-To fix this, either:
-- Add the directory containing that dll to the `PATH` var (e.g. for a pyenv installation it should be in "~/.pyenv/pyenv-win/shims")
-- Copy and paste that dll into "target/debug/deps".
+## Notes
+Had problems (on Windows) using `pyenv-win`. So used `scoop` to manage multiple python versions instead. Seems to works flawlessly with this project.
