@@ -1,0 +1,11 @@
+# Rust builds
+/target
+
+# Python cached binary modules
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.so
+
+# VSCode
+.vscode/

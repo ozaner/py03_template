@@ -1,0 +1,25 @@
+## Poetry
+[tool.poetry]
+name = "py03_template"
+version = "0.1.0"
+description = "A starter project that uses Rust bindings"
+authors = []
+packages = [{include = "src-python/py03_template"}]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+maturin = "^1.4.0"
+pytest = "^7.4.4"
+
+## PEP-517
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+## Maturin
+[tool.maturin]
+python-source = "src-python"
+features = ["pyo3/extension-module"]
