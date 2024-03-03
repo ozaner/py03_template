@@ -28,4 +28,14 @@ poetry run cargo test
 ```
 
 ## Notes
+### Python version management
 Had problems (on Windows) using `pyenv-win`. So used `scoop` to manage multiple python versions instead. Seems to works flawlessly with this project.
+
+### Environment variables
+Make sure that that the `poetry-dotenv-plugin` plugin is installed for `poetry`. You can install it like so:
+
+```sh
+poetry self add poetry-dotenv-plugin
+```
+
+When running a command with `poetry run`, the environment variables in the ".env" file will be automatically included.
